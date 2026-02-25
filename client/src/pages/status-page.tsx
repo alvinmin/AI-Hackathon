@@ -213,9 +213,7 @@ export default function StatusPage() {
               { name: "Audit Issues", file: "Issue_details_no_quarter.xlsx", desc: "~999 issues with severity/status weighting → Component 3: Audit & Issue Trend Score (20%)" },
               { name: "Market News Articles", file: "Predictive_Audit_Market_News.xlsx (Sheet2)", desc: "20 articles with sentiment analysis → Component 4: Business & External Risk (15%)" },
               { name: "Regulatory Inputs", file: "Reg_inputs.xlsx", desc: "6 SEC/EU regulatory changes with directional impact → Component 4: Business & External Risk (15%)" },
-              { name: "IT Incident Data", file: "Incident_data.xlsx", desc: "100 IT incidents with severity/priority mappings → Component 5: Operational Risk (10%)" },
-              { name: "Predictive Heatmap Dataset", file: "predictive_heatmap_dataset.xlsx", desc: "28 units with pre-computed operational metrics & predictive scores → Component 5: Operational Risk (10%)" },
-              { name: "Vendor–CVE Mappings", file: "Auditable_Units_Tech_Vendors_v2.xlsx + known_exploited_vulnerabilities.xlsx", desc: "28 units mapped to vendors; 1,526 CVEs with fuzzy matching → Component 5: Operational Risk (10%)" },
+              { name: "Operational Risk", file: "predictive_heatmap_dataset.xlsx", desc: "28 units with pre-computed operational metrics & predictive scores → Component 5: Operational Risk (10%)" },
             ].map((src) => (
               <div key={src.name} className="flex items-center gap-3 p-2 rounded-md bg-muted/30 text-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
