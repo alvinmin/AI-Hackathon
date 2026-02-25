@@ -78,7 +78,11 @@ export function RiskSummaryCards({ metrics, isLoading }: RiskSummaryCardsProps) 
                   </div>
                 </div>
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className={`text-3xl font-bold tracking-tight ${severityStyles[metric.severity]}`}>
+                  <span className={`text-3xl font-bold tracking-tight ${
+                    metric.icon === "chart"
+                      ? isPositive ? "text-red-600 dark:text-red-400" : isNegative ? "text-emerald-600 dark:text-emerald-400" : "text-muted-foreground"
+                      : severityStyles[metric.severity]
+                  }`}>
                     {metric.value}
                   </span>
                 </div>
