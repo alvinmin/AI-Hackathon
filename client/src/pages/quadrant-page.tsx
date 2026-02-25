@@ -298,7 +298,7 @@ export default function QuadrantPage() {
                   axisLine={{ stroke: "hsl(var(--border))" }}
                 >
                   <Label
-                    value={viewMode === "detail" ? "Risk Increment (score change from base)" : "Avg Risk Change (across all dimensions)"}
+                    value="Risk Increment QoQ"
                     position="bottom"
                     offset={10}
                     style={{ fontSize: 12, fill: "hsl(var(--muted-foreground))" }}
