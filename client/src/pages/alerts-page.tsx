@@ -91,8 +91,9 @@ export default function AlertsPage() {
     : alerts.filter(a => a.severity === severityFilter);
 
   const sortedAlerts = [...filteredAlerts].sort((a, b) => {
-    const order = { critical: 0, high: 1, medium: 2 };
-    return (order[a.severity as keyof typeof order] ?? 3) - (order[b.severity as keyof typeof order] ?? 3);
+    const scoreA = parseFloat(extractAvgScore(a.title)) || 0;
+    const scoreB = parseFloat(extractAvgScore(b.title)) || 0;
+    return scoreB - scoreA;
   });
 
   const counts = {
